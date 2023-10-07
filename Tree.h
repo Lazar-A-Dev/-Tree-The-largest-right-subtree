@@ -1,0 +1,35 @@
+#pragma once
+#include<iostream>
+#include"Node.h"
+using namespace std;
+class Tree
+{
+public:
+	Node* root;
+	int size;
+
+public:
+
+	Tree();
+	~Tree();
+	void AddToTree(int p);
+	Node* FindNode(int p);//NotUsingRecurison
+	Node* FindNode(int p, Node* tmp);//UsingRecursion
+	void PreOrder();
+	void PreOrder(Node* p);
+	void InOrder();
+	void InOrder(Node* p);
+	void PostOrder();
+	void PostOrder(Node* p);
+	int NumberOfNodes(Node* p);
+	int SumOfTree(Node* p);
+
+	int LargestRightSubtree(Node* p);
+	Node* LargestRightSubtree();
+	Node* SearchLargestRightSubtree(Node* p, int tmp);
+
+	int FindClosestValueLeaf(Node* p, int value);
+	Node* FindClosestValueLeaf(int value);
+	Node* TestSearch(Node* p, int value);
+};
+
